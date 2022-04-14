@@ -5,7 +5,7 @@ def cifrado(digitos_clave : int, clave : string, texto : string):
     texto_cifrado = ""
     alfabeto = list(string.ascii_uppercase)
 
-    if digitos_clave < 9 and digitos_clave > 1:
+     if (len(texto) > 0 and len(texto) < 10000) and (digitos_clave < 9 and digitos_clave > 1) :
         if digitos_clave == len(clave):
             texto = texto.replace(' ', '')
             texto = str(texto).upper()
@@ -31,7 +31,7 @@ def cifrado(digitos_clave : int, clave : string, texto : string):
         else:
             print("No coincide el numero de digitos de la clave con la clave ingresada")
     else:
-        print("Clave con demasiados digitos :)")
+        print("Error en el texto ingresado")
     return texto_cifrado
     
 
